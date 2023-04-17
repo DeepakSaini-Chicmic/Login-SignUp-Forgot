@@ -1667,7 +1667,7 @@
     },
     "component": "",
     "_componentId": "cb82ajApmpF4q2SOALXLOYf",
-    "handler": "callbackFunc",
+    "handler": "loginBtn",
     "customEventData": ""
   },
   {

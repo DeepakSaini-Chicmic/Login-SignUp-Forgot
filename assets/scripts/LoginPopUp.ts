@@ -5,24 +5,27 @@ const { ccclass, property } = _decorator;
 export class LoginPopUp extends Component {
   loginCallback: Function = null;
 
+  login_info_callback: object = null;
+
   @property(EditBox) emailEditbox: EditBox = null;
   @property(EditBox) passwordEditbox: EditBox = null;
 
   start() {}
 
   callbackFunc(login_info: object) {
-    let email = this.emailEditbox.string;
-    let password = this.passwordEditbox.string;
-
-    login_info = {
-      emailId: email,
-      password: password,
-    };
-    console.log(login_info);
+    this.login_info_callback = login_info;
+    console.log(this.login_info_callback);
   }
 
   loginBtn() {
-    this.loginCallback();
+    let email = this.emailEditbox.string;
+    let password = this.passwordEditbox.string;
+
+    this.login_info_callback = {
+      email: email,
+      password: password,
+    };
+    console.log(this.login_info_callback);
   }
 
   update(deltaTime: number) {}

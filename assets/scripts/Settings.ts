@@ -7,7 +7,6 @@ export class Settings extends Component {
   callbackLogin: Function = null;
   callbackSignUp: Function = null;
 
-  login_info = {};
   @property(Prefab) LoginPrefab: Prefab = null;
   //   @property({ type: Node }) Login: Node = null;
   LoginNode: Node = null;
@@ -20,20 +19,30 @@ export class Settings extends Component {
     this.callbackSignUp();
     this.node.active = false;
   }
-  loginBtn() {
-    this.callbackLogin();
-    this.node.active = false;
-    this.LoginNode.getComponent(LoginPopUp).callbackFunc(this.login_info);
-  }
+  
+  // loginBtn() {
+  //   this.callbackLogin();
+  //   this.node.active = false;
+  //   this.LoginNode.getComponent(LoginPopUp).callbackFunc({
+  //     email: "",
+  //     password: "",
+  //   });
+  // }
 
   login() {
     if (this.LoginNode == null) {
       this.LoginNode = instantiate(this.LoginPrefab);
       this.node.addChild(this.LoginNode);
-      this.LoginNode.getComponent(LoginPopUp).callbackFunc(this.login_info);
+      this.LoginNode.getComponent(LoginPopUp).callbackFunc({
+        email: "",
+        password: "",
+      });
     } else {
       this.LoginNode.active = true;
-      this.LoginNode.getComponent(LoginPopUp).callbackFunc(this.login_info);
+      this.LoginNode.getComponent(LoginPopUp).callbackFunc({
+        email: "",
+        password: "",
+      });
     }
   }
   update(deltaTime: number) {}
