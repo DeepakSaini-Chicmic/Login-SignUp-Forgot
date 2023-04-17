@@ -10,19 +10,19 @@ import {
   JsonAsset,
   Label,
 } from "cc";
+import { GenderOptions } from "./GenderOptions";
 import { Main } from "./Main";
 const { ccclass, property } = _decorator;
 
 @ccclass("SignUpPopUP")
 export class SignUpPopUP extends Component {
   @property(EditBox) usernameEditbox: EditBox = null;
-  @property(ToggleContainer) gender: ToggleContainer = null;
   @property(EditBox) emailEditbox: EditBox = null;
   @property(EditBox) passwordEditbox: EditBox = null;
-  @property(Node) genderScroll: Node = null;
-  @property(Prefab) genderOptions: Prefab = null;
   @property(JsonAsset) gendersJson: JsonAsset = null;
   @property(Label) selectedGender: Label = null;
+  @property(Node) genderScroll: Node = null;
+  @property(Prefab) genderOptions: Prefab = null;
   signUp_info_callback: Function = null;
 
   optionsJson: any = null;
@@ -30,16 +30,14 @@ export class SignUpPopUP extends Component {
     this.optionsJson = this.gendersJson.json;
     this.optionsJson = this.optionsJson.Options;
     let jsonLength = this.optionsJson.length;
-    console.log(jsonLength);
-    console.log(this.optionsJson[1]);
-
     this.genderScroll.active = false;
     for (let i = 0; i < jsonLength; i++) {
       let gender = instantiate(this.genderOptions);
       this.genderScroll.getComponent(ScrollView).content.addChild(gender);
       this.genderScroll
         .getComponent(ScrollView)
-        .content.children[i].getComponent(Label).string = this.optionsJson[i];
+        .content.children[i].getComponent(GenderOptions)
+        .gender.getComponent(Label).string = this.optionsJson[i];
     }
   }
 

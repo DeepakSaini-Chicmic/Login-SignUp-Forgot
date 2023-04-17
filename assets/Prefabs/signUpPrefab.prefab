@@ -3927,7 +3927,7 @@
         "__id__": 191
       }
     ],
-    "_active": false,
+    "_active": true,
     "_components": [
       {
         "__id__": 207
@@ -4346,8 +4346,8 @@
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": -4.495,
-      "y": 34.785,
+      "x": -5.89,
+      "y": -1.478,
       "z": 0
     },
     "_lrot": {
@@ -5492,21 +5492,11 @@
     "usernameEditbox": {
       "__id__": 31
     },
-    "gender": {
-      "__id__": 101
-    },
     "emailEditbox": {
       "__id__": 127
     },
     "passwordEditbox": {
       "__id__": 153
-    },
-    "genderScroll": {
-      "__id__": 172
-    },
-    "genderOptions": {
-      "__uuid__": "0c503c77-c3ec-4654-aeb0-f3ab1ac37fbb",
-      "__expectedType__": "cc.Prefab"
     },
     "gendersJson": {
       "__uuid__": "a09c907e-a509-450f-b283-1bb9ac6be7ae",
@@ -5514,6 +5504,13 @@
     },
     "selectedGender": {
       "__id__": 161
+    },
+    "genderScroll": {
+      "__id__": 172
+    },
+    "genderOptions": {
+      "__uuid__": "0c503c77-c3ec-4654-aeb0-f3ab1ac37fbb",
+      "__expectedType__": "cc.Prefab"
     },
     "_id": ""
   },
