@@ -95,7 +95,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": -65.822,
+      "y": 64.171,
       "z": 0
     },
     "_lrot": {
@@ -443,7 +443,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": -126.746,
+      "y": 0,
       "z": 0
     },
     "_lrot": {
@@ -798,6 +798,10 @@
     "_enabled": true,
     "__prefab": {
       "__id__": 35
+    },
+    "SignUpPrefab": {
+      "__uuid__": "74187fe6-bb0c-468e-81c4-dd16d32bb34c",
+      "__expectedType__": "cc.Prefab"
     },
     "LoginPrefab": {
       "__uuid__": "1e916dca-3117-4566-94cd-753c41eac760",
