@@ -13,7 +13,6 @@ export class Settings extends Component {
   start() {}
   callbackFunc(signUp: Function) {
     this.callbackSignUp = signUp;
-    // this.callbackLogin = login;
   }
   signUpBtn() {
     this.callbackSignUp();
